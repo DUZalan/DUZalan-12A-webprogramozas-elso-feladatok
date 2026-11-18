@@ -7,4 +7,4 @@
 - [Játékosnév](https://duzalan.github.io/DUZalan-12A-webprogramozas-elso-feladatok/005_jatekosnev)
 - [Zeneválasztó](https://duzalan.github.io/DUZalan-12A-webprogramozas-elso-feladatok/006_zenevalaszto)
 - [Üzenetszámláló](https://duzalan.github.io/DUZalan-12A-webprogramozas-elso-feladatok/007_uzenetszamlalo)
-- [Topjoy](https://github.com/DUZalan/DUZalan-12A-webprogramozas-elso-feladatok.git)
+- [Topjoy](https://duzalan.github.io/DUZalan-12A-webprogramozas-elso-feladatok/008_topjoy)
