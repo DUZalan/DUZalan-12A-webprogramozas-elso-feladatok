@@ -1,0 +1,57 @@
+const kupak = document.querySelector('#kupak');
+const szoveg = document.querySelector('#szoveg');
+const tarolo = document.querySelector('.tarolo');
+const tomb = [0]
+let timeout;
+
+//console.log(kupak, szoveg, tarolo);
+const uzik = [];
+let zarvaVanE = true;
+
+// uzik.csv fetch
+window.addEventListener('DOMContentLoaded', async() => {
+    try {
+        const response = await fetch('./uzik.csv');
+        //console.log(response);
+        const text = await response.text();
+        //console.log(text);
+
+        const sorok = text.split('\n').map(sor => sor.trim());
+        //console.log(sorok);
+        
+        sorok.forEach(sor => {
+            uzik.push(sor);
+        });
+        
+    } catch (error) {
+        console.log(error);
+    }  
+});
+
+//console.log(uzik);
+
+         for (let i = 0; i < 11; i++) {
+          tomb.push(i)
+          setTimeout(function() { 
+            kupak.src = `./images/bottlecap_${i}.png` 
+          },500)
+     
+      }
+
+      console.log(tomb);
+
+// for (var i = 1; i <= 9; ++i)
+//   forgat(i);
+
+// function forgat(i) {
+//   setTimeout(function() {
+//         console.log("klikk");
+//         setTimeout (() => {
+//           for (let i = 0; i < 11; i++) {
+//              kupak.src = `./images/bottlecap_${i}.png`
+            
+//           }
+//         })
+       
+//   }, 300);
+// }
