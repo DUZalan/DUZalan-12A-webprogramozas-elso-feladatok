@@ -6,7 +6,7 @@ let timeout;
 
 //console.log(kupak, szoveg, tarolo);
 const uzik = [];
-let zarvaVanE = true;
+let isClosed = true;
 
 // uzik.csv fetch
 window.addEventListener('DOMContentLoaded', async() => {
@@ -30,28 +30,25 @@ window.addEventListener('DOMContentLoaded', async() => {
 
 //console.log(uzik);
 
-         for (let i = 0; i < 11; i++) {
-          tomb.push(i)
-          setTimeout(function() { 
-            kupak.src = `./images/bottlecap_${i}.png` 
-          },500)
-     
-      }
+const animateCap = async (start, end, updateText) => {
+    const step = start < end ? 1 : -1;
+    for (let index = start; index !== end + step; index += step) {
+        await new Promise(resolve => setTimeout(resolve, 13));
+        kupak.src = `images/bottlecap_${index}.png`;
+    }
+    if (updateText) {
+        szoveg.textContent = isClosed ? uzik[Math.floor(Math.random() * uzik.length)] : '';
+    }
+};
 
-      console.log(tomb);
+window.addEventListener("click", async () => {
+    if (isClosed) {
+        await animateCap(0, 10, true);
+        isClosed = false;
+    } else {
+        await animateCap(10, 0, true);
+        isClosed = true;
+    }
+});
 
-// for (var i = 1; i <= 9; ++i)
-//   forgat(i);
-
-// function forgat(i) {
-//   setTimeout(function() {
-//         console.log("klikk");
-//         setTimeout (() => {
-//           for (let i = 0; i < 11; i++) {
-//              kupak.src = `./images/bottlecap_${i}.png`
-            
-//           }
-//         })
-       
-//   }, 300);
-// }
+// https://github.com/kpisti18/12A_webprogramozas_2024_2025/blob/master/9_topjoy_nyilt_nap/script.js
