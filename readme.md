@@ -8,3 +8,4 @@
 - [Zeneválasztó](https://duzalan.github.io/DUZalan-12A-webprogramozas-elso-feladatok/006_zenevalaszto)
 - [Üzenetszámláló](https://duzalan.github.io/DUZalan-12A-webprogramozas-elso-feladatok/007_uzenetszamlalo)
 - [Topjoy](https://duzalan.github.io/DUZalan-12A-webprogramozas-elso-feladatok/008_topjoy)
+- [Topjoy-forgat](https://duzalan.github.io/DUZalan-12A-webprogramozas-elso-feladatok/009_topjoy_kepek_forgatasaval)
